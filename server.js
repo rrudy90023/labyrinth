@@ -10,8 +10,8 @@ const io = require('socket.io').listen(server)
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('*', function(request, response) {
-  response.sendFile(path.resolve(__dirname + '/dist/index.html'));
+app.get('/', function(request, response) {
+  response.sendFile(__dirname + '/dist/index.html');
 });
 
 
@@ -39,7 +39,7 @@ io.on('connection', socket => {
 
 	socket.on('boardon', data => {
 		//io.emit('startpad', data)
-		console.log(data)
+		//console.log(data)
 	})
 
 	socket.on('gamepad', data => {

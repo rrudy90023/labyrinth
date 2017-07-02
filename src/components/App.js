@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
-import { Router, Route, Link } from 'react-router'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
 import PropTypes from 'prop-types';
 import Controller from './Controller'
 import Floor from './Floor'
 import Shell from './Shell'
 
-ReactDOM.render(
-	<Router>
+const App = (props) => {
 
-			<Route path="/floor" component={Shell}/>
-			<Route path="/controller" component={Shell}/>
+return (
+	<div>
+		<Router >
 
-	</Router>,
-	document.getElementById('root')
-)
+			<div>
+		      <Switch>
+		      	  <Route exact path="/" component={Shell}/>
+			      <Route exact path="/floor" component={Shell}/>
+			      <Route exact path="/controller" component={Shell}/>
+		      </Switch>
+		    </div>
 
+		</Router>
+	</div>
+	)
+
+}
+
+export default App

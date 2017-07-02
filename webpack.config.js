@@ -3,12 +3,15 @@ const path = require('path');
 
 module.exports = {
   entry: [
-    './src/components/App.js'
+    './src/index'
   ],
   module: {
     loaders: [
       { test: /\.js?$/, loader: 'babel-loader', exclude: /node_modules/ },
       { test: /\.s?css$/, loader: 'style-loader!css-loader!sass-loader' },
+      { test: /\.html$/, loader: 'file?name=[name].[ext]' },
+      { test: /\.(png|svg|obj|mtl|ply|dae|jpg)$/, 
+      loader: 'url-loader?limit=100000' }
     ]
   },
   resolve: {
