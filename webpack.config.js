@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   entry: [
-    './src/index'
+    './src/components/App.js'
   ],
   module: {
     loaders: [

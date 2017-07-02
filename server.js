@@ -10,7 +10,7 @@ const io = require('socket.io').listen(server)
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
-app.get('/', function(request, response) {
+app.get('*', function(request, response) {
   response.sendFile(path.resolve(__dirname + '/dist/index.html'));
 });
 

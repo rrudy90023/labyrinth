@@ -1,31 +1,18 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
-import { Router, Route, Switch } from 'react-router'
-
-import '../assets/stylesheets/base.scss';
+import { Router, Route, Link } from 'react-router'
 import PropTypes from 'prop-types';
 import Controller from './Controller'
 import Floor from './Floor'
-// import Shell from './Shell'
-
-// export default class App extends React.Component {
-
-//   constructor(props) {
-//     super(props);
-//   }
-
-//   render() {
-//   	const { name } = this.props
-//     return (
-//       <div><h1>Puto, {name}!</h1></div>
-//     );
-//   }
-// }
+import Shell from './Shell'
 
 ReactDOM.render(
 	<Router>
-		<Route path="/floor" component={Floor}/>
-		<Route path="/controller" component={Controller}/>
+
+			<Route path="/floor" component={Shell}/>
+			<Route path="/controller" component={Shell}/>
+
 	</Router>,
 	document.getElementById('root')
-);
+)
+
