@@ -11,7 +11,7 @@ const io = require('socket.io').listen(server)
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/dist/index.html');
+  response.sendFile(path.resolve(__dirname + '/dist/index.html'));
 });
 
 
@@ -19,12 +19,34 @@ app.get('/', function(request, response) {
 
 
 
-io.on('connection', (socket) => {
-  console.log('Client connected');
-  socket.on('disconnect', () => console.log('Client disconnected'));
-});
+// io.on('connection', (socket) => {
+//   console.log('Client connected');
+//   socket.on('disconnect', () => console.log('Client disconnected'));
+// });
 
-setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
+// setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
+
+io.on('connection', socket => {
+	//console.log('Socket Loaded and Ready')
+	socket.on('medellin', data => {
+		console.log('server', data.cord);
+		io.emit('loadx', data)
+	})
+
+	socket.on('splash', data => {
+		io.emit('colorcatcher', data)
+	})
+
+	socket.on('boardon', data => {
+		//io.emit('startpad', data)
+		console.log(data)
+	})
+
+	socket.on('gamepad', data => {
+		io.emit('initfloor', data)
+		//console.log(data)
+	})
+})
 
 
 
