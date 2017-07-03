@@ -9,7 +9,7 @@ export default class Intro extends Component {
 				<a href="http://labyrinth3d.herokuapp.com/#/floor" >http://labyrinth3d.herokuapp.com/#/floor</a>
 				</div>
 				<h2>on your desktop browser to view the labyrinth</h2>
-				<div style={{''}}></div>
+				<div></div>
 				<br>
 				</br>
 				<br>
