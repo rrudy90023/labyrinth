@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import 'aframe'
 import io from 'socket.io-client';
 
-let socket = io.connect('https://labyrinth3d.herokuapp.com')
+let socket = io.connect('http://192.168.1.9:8080')
 
 export default class Controller extends Component {
 

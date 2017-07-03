@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import Controller from './Controller'
 import Floor from './Floor'
 import Shell from './Shell'
+import Intro from './Intro'
 
 const App = (props) => {
 
@@ -18,6 +19,7 @@ return (
 		      	  <Route exact path="/" component={Shell}/>
 			      <Route exact path="/floor" component={Shell}/>
 			      <Route exact path="/controller" component={Shell}/>
+			      <Route exact path="/intro" component={Shell}/>
 		      </Switch>
 		    </div>
 
