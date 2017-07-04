@@ -17,13 +17,12 @@ export default class Controller extends Component {
 		}
 	}
 
-
 	componentDidMount(){
 		window.ondevicemotion = (event) => {
 			var accelerationX = event.accelerationIncludingGravity.x;
 			var accelerationY = event.accelerationIncludingGravity.y;
 			var accelerationZ = event.accelerationIncludingGravity.z;
-			//console.log("accelerationX", accelerationX + "  " + "accelerationY", accelerationY + "  " + "accelerationZ", accelerationX + "  ")
+
 			this.setState({
 				positionX: accelerationX,
 				positionY: accelerationY,
@@ -35,7 +34,6 @@ export default class Controller extends Component {
 	}
 
 	render(){
-		//console.log("controller", this.state.positionX);
 		return (
 			<div>
 			

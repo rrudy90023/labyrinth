@@ -8,10 +8,9 @@ import Intro from './Intro'
 
 export default class Shell extends Component {
 
-
 	render() {
 		return (
-			<div >
+			<div style={{"position": "absolute", "width":"100%", "height":"100%"}}>
 				{(this.props.location.hash === "#/intro") ?
 				<Intro /> :
 				(this.props.location.hash === "#/floor") ?
@@ -24,6 +23,3 @@ export default class Shell extends Component {
 		);
 	}
 }
-
-
-//<div style={{"position": "absolute", "width":"100%", "height":"100%"}}>
