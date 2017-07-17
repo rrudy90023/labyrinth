@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import 'aframe'
 import io from 'socket.io-client';
 
-let socket = io.connect('192.168.1.9:8080')
+let socket = io.connect('http://labyrinth3d.herokuapp.com')
 import styles from '../assets/stylesheets/base.scss'
 import classNames  from 'classnames'
 import ui from '../assets/images/xy.svg'
