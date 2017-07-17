@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom'
 import 'aframe'
 import io from 'socket.io-client';
 
-let socket = io.connect('http://labyrinth3d.herokuapp.com')
+let socket = io.connect('192.168.1.9:8080')
+import styles from '../assets/stylesheets/base.scss'
+import classNames  from 'classnames'
+import ui from '../assets/images/xy.svg'
 
 export default class Controller extends Component {
 
@@ -34,14 +37,12 @@ export default class Controller extends Component {
 	}
 
 	render(){
+		//console.log(styles.uiPad)	
+
 		return (
-			<div>
-			
-				<h3>Gamepad UI</h3>
-				<h3>X Position:       {this.state.positionX}</h3>
-				<h3>Y Position:       {this.state.positionY}</h3>
-				<h3>Z Position:       {this.state.positionZ}</h3>
+			<div className={classNames(styles.uiPad)}>
+				<img style={{'width': '100%', 'height':'100%', 'position':'fixed', 'top':'0', 'left':'0'}} src={ui} />
 			</div>
-		);
+		);	
 	}
 }

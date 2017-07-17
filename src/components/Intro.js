@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import styles from '../assets/stylesheets/base.scss'
-import classNames  from 'classnames'
 
 export default class Intro extends Component {
 	render() {
