@@ -6,6 +6,7 @@ layout: docs
 parent_section: docs
 order: 1
 section_order: 3
+source_code: src/core/a-entity.js
 ---
 
 [ecs]: ../introduction/entity-component-system.md

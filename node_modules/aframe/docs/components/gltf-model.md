@@ -3,6 +3,7 @@ title: gltf-model
 type: components
 layout: docs
 parent_section: components
+source_code: src/components/gltf-model.js
 ---
 
 [about-gltf]: https://www.khronos.org/gltf

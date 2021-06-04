@@ -14,7 +14,7 @@ app.get('/', function(request, response) {
 });
 
 io.on('connection', socket => {
-	//console.log('Socket Loaded and Ready')
+	console.log('Socket Loaded and Ready')
 	socket.on('medellin', data => {
 		console.log('server', data.cord);
 		io.emit('loadx', data)
@@ -26,12 +26,12 @@ io.on('connection', socket => {
 
 	socket.on('boardon', data => {
 		//io.emit('startpad', data)
-		//console.log(data)
+		console.log(data)
 	})
 
 	socket.on('gamepad', data => {
 		io.emit('initfloor', data)
-		//console.log(data)
+		console.log(data)
 	})
 })
 

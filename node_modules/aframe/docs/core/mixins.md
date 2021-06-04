@@ -4,6 +4,7 @@ type: core
 layout: docs
 parent_section: core
 order: 7
+source_code: src/core/a-mixin.js
 ---
 
 Mixins provide a way to compose and reuse commonly-used sets of component

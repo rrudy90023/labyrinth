@@ -4,6 +4,7 @@ type: core
 layout: docs
 parent_section: core
 order: 4
+source_code: src/core/systems.js
 ---
 
 [ecs]: ../introduction/entity-component-system.md

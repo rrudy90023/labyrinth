@@ -3,6 +3,7 @@ title: sound
 type: components
 layout: docs
 parent_section: components
+source_code: src/components/sound.js
 ---
 
 [position]: ./position.md

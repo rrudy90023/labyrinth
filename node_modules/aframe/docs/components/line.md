@@ -3,6 +3,7 @@ title: line
 type: components
 layout: docs
 parent_section: components
+source_code: src/components/line.js
 ---
 
 [threeline]: https://threejs.org/docs/#api/objects/Line

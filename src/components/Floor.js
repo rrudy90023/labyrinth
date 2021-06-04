@@ -9,6 +9,8 @@ physics.registerAll();
 import THREE from 'three'
 import io from 'socket.io-client';
 
+
+//let socket = io.connect('http://192.168.1.25:8080/');
 let socket = io.connect('http://labyrinth3d.herokuapp.com')
 
 export default class Floor extends Component {
